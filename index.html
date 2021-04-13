@@ -11,13 +11,71 @@
 </head>
 
 <body>
-    <div class=container>
+    <div class="container">
+        <div class="weatherApp">
+            <div id="searchBar">
+                <form>
+                    <input type="text" class="search-term" placeholder="Search For a City">
+                    <button type="submit" class="searchButton"> <i class="fa fa-search"></i></button>
+                </form>
+            </div>
 
 
-        <h1>
-            Hello World
-        </h1>
-        <a href="" class="btn btn-primary"> Click me</a>
+            <div class="row">
+                <div class="col-6">
+
+
+                    <h1>
+                        London
+                    </h1>
+                    <ul>
+                        <li id="currentTime">
+                            Friday 5th of April, 2021
+                        </li>
+
+                        <li id="description">
+                            Moderate Rain
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6">
+
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy" />
+                    11
+
+                    <div id="metrics">
+                        <div id="celsius">
+                            ºC |
+                        </div>
+                        <div id="far">
+                            ºF
+                        </div>
+                    </div>
+
+
+                    <ul>
+
+                        <li id="realFeel">
+                            Feels like 9ºC
+                        </li>
+                        <li id="minMax">
+                            Min 9ºC | Max 12ºC
+                        </li>
+
+
+                </div>
+
+            </div>
+        </div>
+        <small>
+            <a href="https://github.com/caundurragas/Weather-app-project" target="_blank"> Open-source code</a>
+            by Catalina Undurraga
+        </small>
+
+    </div>
+
+    <a href="" class="btn btn-primary"> Click me</a>
     </div>
     <script src="src/app.js"></script>
 </body>

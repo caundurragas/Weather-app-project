@@ -1,3 +1,35 @@
+.weatherApp {
+  max-width: 600px;
+  font-family: "Encode Sans", sans-serif;
+  border: 2px solid #dadde1;
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 15px 10px;
+}
+
 h1 {
-  color: blue;
+  margin-top: 15px;
+  color: #504b4b;
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+}
+#timeDescription {
+  padding: 0;
+  color: #6f6a6a;
+}
+
+.weatherTemperature img {
+  height: 64px;
+  width: 64px;
+}
+
+.weatherTemperature {
+}
+.currentWeather {
+  display: inline;
+  font-size: 64px;
+  vertical-align: middle;
 }

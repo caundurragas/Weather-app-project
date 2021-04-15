@@ -20,7 +20,6 @@ function formatDate(timeStamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let currentTemperature = document.querySelector("#currentTemperature");
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   let city = document.querySelector("#city");
@@ -33,10 +32,16 @@ function displayTemperature(response) {
   minTemperature.innerHTML = Math.round(response.data.main.temp_min);
   let currentTime = document.querySelector("#currentTime");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
+  let iconWeather = document.querySelector("#iconWeather");
+  iconWeather.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconWeather.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "3ec7bf82a84873e82215df15af12d134";
 let apiCity = "London";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${apiCity}&units=metric&appid=${apiKey}`;
-console.log(apiUrl);
+
 axios.get(apiUrl).then(displayTemperature);

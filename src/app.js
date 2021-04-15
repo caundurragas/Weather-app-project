@@ -1,3 +1,24 @@
+function formatDate(timeStamp) {
+  let date = new Date(timeStamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let hour = date.getHours();
+
+  let minutes = date.getMinutes();
+
+  let numberDay = date.getDate();
+
+  return `${day} ${numberDay}, ${hour}:${minutes}`;
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let currentTemperature = document.querySelector("#currentTemperature");
@@ -10,8 +31,8 @@ function displayTemperature(response) {
   realFeel.innerHTML = Math.round(response.data.main.feels_like);
   let minTemperature = document.querySelector("#minTemperature");
   minTemperature.innerHTML = Math.round(response.data.main.temp_min);
-  let maxTemperature = document.querySelector("#maxTemperature");
-  maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
+  let currentTime = document.querySelector("#currentTime");
+  currentTime.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "3ec7bf82a84873e82215df15af12d134";

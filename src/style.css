@@ -50,3 +50,16 @@ li {
   position: relative;
   top: -32px;
 }
+.searchCity {
+  display: inline;
+  width: auto;
+  padding-right: 5px;
+  padding-left: 45px;
+}
+.submmitButton {
+  width: auto;
+  padding-left: 0px;
+}
+#searchSquare-input {
+  width: 385px;
+}

@@ -17,74 +17,82 @@
 <body>
     <div class="container">
         <div class="weatherApp">
-            <div id="searchBar">
-                <form>
-                    <input type="text" class="search-term" placeholder="Search For a City">
-                    <button type="submit" class="searchButton"> <i class="fa fa-search"></i></button>
-                </form>
-            </div>
+            <form id="searchBar">
 
-
-            <div class="row">
-                <div class="col-6">
-
-
-                    <h1 id=city>
-                    </h1>
-                    <ul id="timeDescription">
-                        <li id="currentTime">
-                            Friday 5th of April, 2021
-                        </li>
-
-                        <li id="description">
-
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-6">
-
-                    <div class="clearfix weatherTemperature">
-                        <img src="" alt="Partly cloudy" id="iconWeather" class="float-left" />
-                        <div class="float-left currentWeather">
-                            <span id="currentTemperature">
-
-                            </span>
-
-
-                            <span class=" metrics">
-                                <span id="celsius">
-                                    ºC |
-                                </span>
-                                <span id="far">
-                                    ºF
-                                </span>
-                            </span>
-                        </div>
+                <div class="row">
+                    <div class="row-9 searchCity">
+                        <input type="search" class="search-term" placeholder="Search For a City"
+                            id="searchSquare-input">
                     </div>
+                    <div class="row-3 submmitButton">
+                        <input type="submit" />
+                    </div>
+            </form>
+
+        </div>
 
 
 
+        <div class="row">
+            <div class="col-6">
 
 
-                    <ul id=temperatureInfo>
+                <h1 id=city>
+                </h1>
+                <ul id="timeDescription">
+                    <li id="currentTime">
+                        Friday 5th of April, 2021
+                    </li>
 
-                        <li id="realFeel">
-                            Feels like <span id="feelsLike"></span>ºC
-                        </li>
-                        <li id="minMax">
-                            Min <span id="minTemperature"> 9 </span>ºC | Max <span id="maxTemperature">12</span>ºC
-                        </li>
+                    <li id="description">
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+
+                <div class="clearfix weatherTemperature">
+                    <img src="" alt="Partly cloudy" id="iconWeather" class="float-left" />
+                    <div class="float-left currentWeather">
+                        <span id="currentTemperature">
+
+                        </span>
 
 
+                        <span class=" metrics">
+                            <span id="celsius">
+                                ºC |
+                            </span>
+                            <span id="far">
+                                ºF
+                            </span>
+                        </span>
+                    </div>
                 </div>
 
+
+
+
+
+                <ul id=temperatureInfo>
+
+                    <li id="realFeel">
+                        Feels like <span id="feelsLike"></span>ºC
+                    </li>
+                    <li id="minMax">
+                        Min <span id="minTemperature"> 9 </span>ºC | Max <span id="maxTemperature">12</span>ºC
+                    </li>
+
+
             </div>
+
         </div>
-        <small>
-            <a href="https://github.com/caundurragas/Weather-app-project" target="_blank"> Open-source code</a>
-            by Catalina Undurraga
-        </small>
+    </div>
+    <small>
+        <a href="https://github.com/caundurragas/Weather-app-project" target="_blank"> Open-source code</a>
+        by Catalina Undurraga
+    </small>
 
     </div>
 

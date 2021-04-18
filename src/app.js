@@ -21,6 +21,7 @@ function formatDate(timeStamp) {
 
 function displayTemperature(response) {
   let currentTemperature = document.querySelector("#currentTemperature");
+  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   let city = document.querySelector("#city");
@@ -29,9 +30,9 @@ function displayTemperature(response) {
 
   weatherDescription.innerHTML = response.data.weather[0].description;
   let realFeel = document.querySelector("#feelsLike");
-  realFeel.innerHTML = Math.round(response.data.main.feels_like);
+  realFeel.innerHTML = Math.round(response.data.wind.speed);
   let minTemperature = document.querySelector("#minTemperature");
-  minTemperature.innerHTML = Math.round(response.data.main.temp_min);
+  minTemperature.innerHTML = Math.round(response.data.main.humidity);
   let currentTime = document.querySelector("#currentTime");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
   let iconWeather = document.querySelector("#iconWeather");

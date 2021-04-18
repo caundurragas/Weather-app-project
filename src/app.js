@@ -21,10 +21,12 @@ function formatDate(timeStamp) {
 
 function displayTemperature(response) {
   let currentTemperature = document.querySelector("#currentTemperature");
+  celsiusTemperature = response.data.main.temp;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
   let weatherDescription = document.querySelector("#description");
+
   weatherDescription.innerHTML = response.data.weather[0].description;
   let realFeel = document.querySelector("#feelsLike");
   realFeel.innerHTML = Math.round(response.data.main.feels_like);
@@ -55,3 +57,30 @@ function getCity(event) {
 
 let searchForm = document.querySelector("#searchBar");
 searchForm.addEventListener("submit", getCity);
+
+function displayFahrenheit(event) {
+  event.preventDefault;
+  let getFahrenheit = (celsiusTemperature * 9) / 5 + 32;
+  fahrenheit.classList.add("active");
+  celcius.classList.remove("active");
+  let currentTemperature = document.querySelector("#currentTemperature");
+  currentTemperature.innerHTML = Math.round(getFahrenheit);
+}
+
+function displayCelsius(event) {
+  event.preventDefault;
+  let currentTemperature = document.querySelector("#currentTemperature");
+  fahrenheit.classList.remove("active");
+  celcius.classList.add("active");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#far");
+fahrenheit.addEventListener("click", displayFahrenheit);
+
+let celcius = document.querySelector("#celsius");
+celcius.addEventListener("click", displayCelsius);
+
+serchToGetApi("London");

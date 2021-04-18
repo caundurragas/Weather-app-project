@@ -46,7 +46,13 @@ li {
 }
 .metrics {
   font-size: 15px;
-  margin-left: -20px;
+  margin-left: -15px;
+  position: relative;
+  top: -32px;
+}
+#far {
+  font-size: 15px;
+  margin-left: -2px;
   position: relative;
   top: -32px;
 }
@@ -62,4 +68,10 @@ li {
 }
 #searchSquare-input {
   width: 385px;
+}
+
+.weatherTemperature .active {
+  color: #6f6a6a;
+  cursor: default;
+  text-decoration: none;
 }

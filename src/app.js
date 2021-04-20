@@ -83,4 +83,33 @@ fahrenheit.addEventListener("click", displayFahrenheit);
 let celcius = document.querySelector("#celsius");
 celcius.addEventListener("click", displayCelsius);
 
+function displayDailyForecast() {
+  let dailyForecast = document.querySelector("#daily-forecast");
+  let dailyForecastHTML = `<div class= "row">`;
+  let days = ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    dailyForecastHTML =
+      dailyForecastHTML +
+      `<div class="col-2">
+                    <div class="day">
+                        ${day}
+                    </div>
+                    <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" class="weatherForecastIcon" />
+                    <div class="weatherForecastMaxTemperature">
+                        Max23ºC
+                    </div>
+
+                    <div class="weatherForecastMinTemperature">
+                        Min9ºC
+                    </div>
+
+
+                </div>`;
+  });
+
+  dailyForecastHTML = dailyForecastHTML + `</div>`;
+  dailyForecast.innerHTML = dailyForecastHTML;
+}
+
+displayDailyForecast();
 serchToGetApi("London");

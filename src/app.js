@@ -60,31 +60,6 @@ function getCity(event) {
 let searchForm = document.querySelector("#searchBar");
 searchForm.addEventListener("submit", getCity);
 
-function displayFahrenheit(event) {
-  event.preventDefault;
-  let getFahrenheit = (celsiusTemperature * 9) / 5 + 32;
-  fahrenheit.classList.add("active");
-  celcius.classList.remove("active");
-  let currentTemperature = document.querySelector("#currentTemperature");
-  currentTemperature.innerHTML = Math.round(getFahrenheit);
-}
-
-function displayCelsius(event) {
-  event.preventDefault;
-  let currentTemperature = document.querySelector("#currentTemperature");
-  fahrenheit.classList.remove("active");
-  celcius.classList.add("active");
-  currentTemperature.innerHTML = Math.round(celsiusTemperature);
-}
-
-celsiusTemperature = null;
-
-let fahrenheit = document.querySelector("#far");
-fahrenheit.addEventListener("click", displayFahrenheit);
-
-let celcius = document.querySelector("#celsius");
-celcius.addEventListener("click", displayCelsius);
-
 function getForecast(coordinates) {
   let apiKey = "3ec7bf82a84873e82215df15af12d134";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;

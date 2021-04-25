@@ -15,6 +15,9 @@
 </head>
 
 <body>
+
+
+
     <div class="container">
         <div class="weatherApp">
             <form id="searchBar">
@@ -25,78 +28,93 @@
                             id="searchSquare-input">
                     </div>
                     <div class="row-3 submmitButton">
-                        <input type="submit" />
+                        <input value="Search" type="submit" id=searchButton />
                     </div>
             </form>
 
-        </div>
 
 
 
-        <div class="row">
-            <div class="col-6">
+
+            <div class="row">
+                <div class="col-6">
 
 
-                <h1 id=city>
-                </h1>
-                <ul id="timeDescription">
-                    <li id="currentTime">
-                        Friday 5th of April, 2021
-                    </li>
+                    <h1 id=city>
+                    </h1>
+                    <ul id="timeDescription">
+                        <li id="currentTime">
+                            Friday 5th of April, 2021
+                        </li>
 
-                    <li id="description">
+                        <li id="description">
 
-                    </li>
-                </ul>
-            </div>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="col-6">
+                <div class="col-6">
 
-                <div class="clearfix weatherTemperature">
-                    <img src="" alt="Partly cloudy" id="iconWeather" class="float-left" />
-                    <div class="float-left currentWeather">
-                        <span id="currentTemperature">
+                    <div class="clearfix weatherTemperature">
+                        <img src="" alt="Partly cloudy" id="iconWeather" class="float-left" />
+                        <div class="float-left currentWeather">
+                            <span id="currentTemperature">
 
-                        </span>
+                            </span>
 
 
-                        <span class=" metrics">
-                            <a href="#" span id="celsius" class="active"></a>
-                            ºC </a>
-                        </span>
+                            <span class=" metrics">
+                                <a href="#" span id="celsius" class="active"></a>
+                                ºC </a>
+                            </span>
+                        </div>
                     </div>
+
+                    <ul id=temperatureInfo>
+                        <li id="wind">
+                            Wind <span id="windInfo"></span>mp
+                        </li>
+                        <li id="hum">
+                            Humidity <span id="humidity"></span>%
+                        </li>
+                        <li id="feelsLike">
+                            Feels Like <span id="realFeel"></span>ºC
+                        </li>
+
+                    </ul>
+
+
+
                 </div>
 
 
 
+            </div>
+            <hr>
+            <div class="forecastContainer">
+                <h3>
+                    Daily
+                </h3>
+                <div class="weatherForecast" id="daily-forecast">
 
 
-                <ul id=temperatureInfo>
-                    <li id="realFeel">
-                        Wind <span id="feelsLike"></span> km/hr
-                    </li>
-                    <li id="minMax">
-                        Humidity <span id="minTemperature"></span>%
-                    </li>
 
 
+                </div>
 
 
             </div>
-
         </div>
-        <div class="weatherForecast" id="daily-forecast">
 
-        </div>
     </div>
+
+
     <small>
         <a href="https://github.com/caundurragas/Weather-app-project" target="_blank"> Open-source code</a>
         by Catalina Undurraga
     </small>
-
     </div>
 
-    </div>
     <script src="src/app.js"></script>
 </body>
 

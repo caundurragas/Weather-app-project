@@ -28,10 +28,12 @@ function displayTemperature(response) {
   let weatherDescription = document.querySelector("#description");
 
   weatherDescription.innerHTML = response.data.weather[0].description;
-  let realFeel = document.querySelector("#feelsLike");
-  realFeel.innerHTML = Math.round(response.data.wind.speed);
-  let minTemperature = document.querySelector("#minTemperature");
-  minTemperature.innerHTML = Math.round(response.data.main.humidity);
+  let wind = document.querySelector("#windInfo");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
+  let feels_like = document.querySelector("#realFeel");
+  feels_like.innerHTML = Math.round(response.data.main.feels_like);
   let currentTime = document.querySelector("#currentTime");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
   let iconWeather = document.querySelector("#iconWeather");
@@ -100,11 +102,11 @@ function displayDailyForecast(response) {
                       forecastDay.weather[0].icon
                     }.png" alt="" class="weatherForecastIcon" />
                     <div class="weatherForecastMaxTemperature">
-                        Max${Math.round(forecastDay.temp.max)}
+                        Max${Math.round(forecastDay.temp.max)}º
                     </div>
 
                     <div class="weatherForecastMinTemperature">
-                        Min${Math.round(forecastDay.temp.min)}
+                        Min ${Math.round(forecastDay.temp.min)}º
                     </div>
 
 
